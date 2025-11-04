@@ -175,6 +175,14 @@ If critical intent is detected →
 
 Message is stored for annual report analytics.
 
+🎬 Live Demo
+
+See how it works in action 👇  
+
+<p align="center">
+  <img src="/public/demo.gif" width="500" alt="Project demo" />
+</p>
+
 💬 Contributing
 
 Contributions are welcome!
@@ -184,3 +192,5 @@ If you'd like to improve the AI model, workflow, or UI, feel free to submit a pu
 
 SpeakLIFE is built with compassion to provide hope and connection for anyone who needs to be heard.
 Together, let’s make every voice matter.
+
+🧠 *Developed as part of DumbWays Bootcamp project.*

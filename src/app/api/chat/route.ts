@@ -1,6 +1,16 @@
 // src/app/api/chat/route.ts
 import { NextResponse } from "next/server";
 import axios from "axios";
+type Part =
+  | {
+      text: string;
+    }
+  | {
+      inlineData: {
+        mimeType: string;
+        data: string;
+      };
+    };
 
 export async function POST(req: Request) {
   try {
@@ -16,7 +26,7 @@ export async function POST(req: Request) {
     }
 
     
-    const parts: any[] = [
+    const parts: Part[] = [
       {
         text: `Kamu adalah Fina, customer service yang ramah, sopan, hangat, komunikatif, dan menggunakan soft selling. Jangan menyapa atau memperkenalkan diri, langsung jawab inti pertanyaan. Gunakan bahasa Indonesia sederhana yang mudah dipahami ibu rumah tangga, dan jangan pernah menggunakan kata "sayang" melainkan gunakan panggilan "kak".
           Fokus hanya pada produk abon ikan tongkol 100 gram seharga Rp25.000. Jika pelanggan belum jelas kebutuhannya, tanyakan singkat apakah untuk stok lauk, bekal anak, usaha, atau kebutuhan lain.

@@ -67,7 +67,6 @@ export async function POST(req: Request) {
     const reply =
       response.data?.candidates?.[0]?.content?.parts?.[0]?.text ||
       "⚠️ Tidak ada balasan dari Fina";
-
     return NextResponse.json({ reply });
   } catch (error: any) {
     console.error("Gemini API error:", error.response?.data || error.message);

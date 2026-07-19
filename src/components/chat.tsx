@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Paperclip } from 'lucide-react';
 import { TypingLoader } from "./loading";
-import EmergencyDialog from "./dialog";
 
 interface Message {
   text: string;
@@ -30,7 +29,7 @@ export default function ChatTemplate() {
 
   useEffect(() => {
   if (messages.length === 0) {
-    setMessages([{ text: "Hai aku Fina, Senang bisa berjumpa denganmu. Ada cerita apa hari ini ?", sender: "ai"}]);
+    setMessages([{ text: "Halo, saya Fina 😊 Ada yang bisa saya bantu seputar abon ikan hari ini ?", sender: "ai"}]);
   }
 }, []);
 
@@ -126,12 +125,9 @@ export default function ChatTemplate() {
 
   return (
     <div className="flex flex-col w-full sm:w-[40%] h-[100vh] sm:h-screen md:h-[780px] bg-[#FFF8EC] rounded-xl shadow-lg overflow-hidden">
-      <EmergencyDialog
-        open={msgEmergensy}
-        onClose={() => setMsgEmergensy(false)}
-      />
+      
       <div className="flex items-center p-3 sm:p-4 bg-[#f4eee2] text-[#3A2F2F] font-semibold text-base sm:text-lg">
-        <img src="/logo.png" alt="logo" className="w-12 sm:w-16 lg:w-20 mr-2"/>
+        <img src="/simulasi.png" alt="logo" className="w-12 sm:w-12 lg:w-16 mr-2 rounded-sm"/>
       </div>
 
     
